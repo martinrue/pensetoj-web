@@ -10,7 +10,7 @@ const userCard = (() => {
       $(".user-card .name").innerText = user.name;
       $(".user-card .bio").innerText = user.bio;
 
-      const files = lib.plural(data.files, "Penseto");
+      const files = lib.plural(user.files, "Penseto");
       $(".user-card .stats .stat:first-child .value").innerText = user.files;
       $(".user-card .stats .stat:first-child .label").innerText = files;
     });
