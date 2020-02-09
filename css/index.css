@@ -1,0 +1,302 @@
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444;
+  background: #e6e6e6;
+  padding: 0;
+  margin: 0;
+}
+
+.center {
+  margin: 20px;
+}
+
+.content {
+  margin: 0px auto;
+  max-width: 800px;
+  background: #f4f4f4;
+  border: solid 1px #e0e0e0;
+  border-radius: 20px;
+  visibility: hidden;
+  min-width: 360px;
+}
+
+header {
+  background-image: url("/images/tile.svg"),
+    linear-gradient(to bottom, #139217aa, #139217dd);
+  border-radius: 20px;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+header .logo {
+  height: 60px;
+  padding-bottom: 10px;
+}
+
+.user-card {
+  width: 300px;
+  margin: 0 auto;
+  background: #fff;
+  border: solid 5px #f4f4f4;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.user-card img {
+  display: block;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background: #f4f4f4;
+  margin: 0 auto;
+}
+
+.user-card .name {
+  font-weight: 300;
+  font-size: 26px;
+  padding-top: 10px;
+}
+
+.user-card .bio {
+  font-weight: 300;
+  padding-top: 10px;
+}
+
+.user-card .stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user-card .stats .stat {
+  position: relative;
+  padding-left: 55px;
+  text-align: left;
+}
+
+.user-card .stats .stat:last-child {
+  margin-left: 15px;
+}
+
+.user-card .stats .stat img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 15px;
+}
+
+.user-card .stats .stat .value {
+  display: inline-block;
+  margin-top: 3px;
+  font-weight: 200;
+  color: #333;
+}
+
+.user-card .stats .stat .label {
+  margin-top: -2px;
+  font-size: 12px;
+  color: #777;
+  width: 70px;
+  text-transform: uppercase;
+}
+
+.items {
+  padding: 0px;
+}
+
+.items .item.template {
+  display: none;
+}
+
+.items .item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+}
+
+.items .item .buttons .btn {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.items .item .buttons .btn.play {
+  background: #f0f0f0 url("/images/media/play.svg") 22px center / 22px no-repeat;
+}
+
+.items .item .buttons .btn.pause {
+  background: #f0f0f0 url("/images/media/pause.svg") center center / 22px
+    no-repeat;
+}
+
+.items .item .buttons .btn.loading {
+  background: #f0f0f0;
+}
+
+.items .item .buttons .btn .spinner {
+  display: none;
+}
+
+.items .item .buttons .btn.loading .spinner {
+  display: inline-block;
+}
+
+.items .item .buttons .time {
+  padding-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.items .item .details {
+  flex: 1;
+  position: relative;
+  margin-left: 15px;
+  margin-top: 3px;
+  padding-bottom: 20px;
+}
+
+.items .item .details .title {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 200;
+}
+
+.items .item .details .desc {
+  margin-top: 8px;
+  color: #666;
+  font-weight: 200;
+}
+
+.items .item .details .progress {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  margin-top: 7px;
+  background: #13921722;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.items .item .details .progress .bar {
+  height: 10px;
+  width: 0px;
+  background: #139217aa;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.items .item .likes {
+  background: #f7f7f7;
+  margin-left: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.items .item .likes .like-button {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.items .item .likes .like-button .like-icon {
+  width: 30px;
+  height: 30px;
+  background: url("/images/media/like-off.svg") center center / 25px no-repeat;
+}
+
+.items .item .likes .like-button:hover .like-icon {
+  background: url("/images/media/like-on.svg") center center / 25px no-repeat;
+}
+
+.items .item .likes .like-button.selected .like-icon {
+  background: url("/images/media/like-on.svg") center center / 25px no-repeat;
+  animation: button-pop 250ms ease-in-out;
+}
+
+.items .item .likes .total {
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@keyframes button-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .center {
+    margin: 0;
+  }
+
+  .content {
+    border-radius: 0px;
+  }
+
+  header {
+    border-radius: 0px;
+  }
+}
+
+.spinner {
+  display: inline-block;
+}
+
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 3px 3px;
+  border-radius: 50%;
+  border: 3px solid #444;
+  border-color: #444 transparent #444 transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
