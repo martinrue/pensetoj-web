@@ -59,7 +59,7 @@ const player = (() => {
     state.busy = false;
   };
 
-  const playPause = id => {
+  const playPause = (id, cb) => {
     if (state.busy) {
       return;
     }
@@ -130,6 +130,7 @@ const player = (() => {
       state.howl.pause();
     } else {
       state.howl.play();
+      setTimeout(cb || (() => {}), 250);
     }
   };
 
@@ -138,10 +139,12 @@ const player = (() => {
       return;
     }
 
-    if (state.howl.playing()) {
-      cancelAnimationFrame(state.animationFrameHandle);
-      state.howl.seek(state.duration * percent);
+    if (!state.howl.playing()) {
+      return playPause(id, () => seek(id, percent));
     }
+
+    cancelAnimationFrame(state.animationFrameHandle);
+    state.howl.seek(state.duration * percent);
   };
 
   const getCurrent = () => {
