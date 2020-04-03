@@ -5,7 +5,7 @@ const audio = (() => {
         id: "2",
         url: "/audio/2.mp3",
         title: "02: Lingvo",
-        desc: "Mi parolas pri la mirindaĵo de lingvo.",
+        desc: "Mi parolas pri la mirindeco de lingvo.",
         time: "09:53"
       },
       {
