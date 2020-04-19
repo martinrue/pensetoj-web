@@ -2,6 +2,14 @@ const audio = (() => {
   const getFiles = () => {
     return [
       {
+        id: "3",
+        url: "/audio/3.mp3",
+        title: "03: Adaptado",
+        desc:
+          "Mi parolas pri adaptado kaj kial oni devus pensi pri ĝi por daŭre pliboniĝi.",
+        time: "10:53"
+      },
+      {
         id: "2",
         url: "/audio/2.mp3",
         title: "02: Lingvo",
