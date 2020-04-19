@@ -34,7 +34,7 @@ const player = (() => {
   };
 
   const notifyProgress = () => {
-    if (state.howl && state.howl.playing()) {
+    if (state.howl) {
       let time = Number(state.howl.seek());
 
       if (isNaN(time)) {
