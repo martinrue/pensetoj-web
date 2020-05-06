@@ -2,6 +2,13 @@ const audio = (() => {
   const getFiles = () => {
     return [
       {
+        id: "5",
+        url: "/audio/5.mp3",
+        title: "05: Persisto",
+        desc: "Mi rakontas amuzan rakonton kiu temas pri persisto.",
+        time: "14:48"
+      },
+      {
         id: "4",
         url: "/audio/4.mp3",
         title: "04: Serĉu Inspiron",
